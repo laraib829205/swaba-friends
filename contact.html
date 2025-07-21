@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - Swaba Friends</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background:linear-gradient(135deg, #dbe6f6, #c5796d);
+      font-family: 'Orbitron', sans-serif;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    .contact-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgb(207, 161, 100);
+      border: 1px solid rgb(213, 115, 29);
+      width: 100%;
+      max-width: 600px;
+      animation: glow 3s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { box-shadow: 0 0 20px rgb(180, 40, 173); }
+      to { box-shadow: 0 0 40px rgb(190, 75, 75), 0 0 80px #d4ff00; }
+    }
+
+    .contact-card h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+      color: #000000;
+      letter-spacing: 2px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin: 15px 0;
+      font-size: 18px;
+    }
+
+    .contact-item i {
+      font-size: 22px;
+      margin-right: 15px;
+      color: rgb(200, 110, 128);
+    }
+
+    .contact-item span {
+      color: #ffffffdd;
+    }
+
+    .socials {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      font-size: 24px;
+      color: rgb(47, 100, 133);
+      transition: transform 0.3s;
+    }
+
+    .socials a:hover {
+      transform: scale(1.3);
+      color: #22666a;
+    }
+
+    @media (max-width: 600px) {
+      .contact-card {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contact-card">
+    <h2>📡 Contact Me - SWABA FRIENDS</h2>
+
+    <div class="contact-item">
+      <i class="fas fa-phone"></i>
+      <span>+91 98464 22145</span>
+    </div>
+
+    <div class="contact-item">
+      <i class="fas fa-envelope"></i>
+      <span>swabafriends.com,
+        <br>
+        mdlaraib1115@gmail.com
+      </span>
+    </div>
+
+    <div class="contact-item">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>Darul Huda Main Campus,CHS <strong>[NIICS]</strong> India,Kerala</span>
+    </div>
+
+    <div class="socials">
+      <img src="./follow logo.png"
+      <br>    
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook">
+        
+      </i></a>
+    </div>
+  </div>
+
+</body>
+</html>

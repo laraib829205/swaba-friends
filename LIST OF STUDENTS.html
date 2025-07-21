@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Swaba Friends - Student List</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(145deg, #f4a388, #cbbebb, #c289f0);
+      color: #fff;
+      overflow-x: hidden;
+      position: relative;
+      padding: 50px 20px;
+    }
+
+    /* ✨ Particles in Background */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: radial-gradient(#e7e3de 1px, transparent 1px),
+                  radial-gradient(#ff8000 1px, transparent 1px);
+      background-size: 40px 40px;
+      background-position: 0 0, 20px 20px;
+      opacity: 0.03;
+      z-index: 0;
+      pointer-events: none;
+      animation: moveStars 20s linear infinite;
+    }
+
+    @keyframes moveStars {
+      from { background-position: 0 0, 20px 20px; }
+      to { background-position: 1000px 500px, 1020px 520px; }
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3em;
+      text-align: center;
+      color: #fff;
+      letter-spacing: 2px;
+      margin-bottom: 60px;
+      position: relative;
+      z-index: 1;
+      animation: glitch 2.5s infinite;
+    }
+/* @keyframes glitch {
+      0%, 100% { text-shadow: 2px 2px #00ffe7, -2px -2px #ff00d4; }
+      25% { text-shadow: -3px 2px #ff00d4, 2px -3px #00ffe7; }
+      50% { text-shadow: 2px -2px #00ffe7, -2px 2px #ff00d4; }
+      75% { text-shadow: -1px -3px #ff00d4, 3px 1px #00ffe7; }
+    } */
+    
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .student-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid transparent;
+      border-image: linear-gradient(45deg, #d1eaeb, #c4d8cf, #162425);
+      border-image-slice: 1;
+      backdrop-filter: blur(10px);
+      padding: 25px;
+      border-radius: 20px;
+      text-align: center;
+      transition: 0.5s ease;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
+      transform-style: preserve-3d;
+    }
+
+    .student-card:hover {
+      transform: rotateY(5deg) rotateX(5deg);
+      box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+    }
+
+    .student-card img {
+      width: 140px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid #ef7672;
+      box-shadow: 0 0 15px #e8c1b9;
+      transition: transform 0.4s;
+    }
+
+    .student-card:hover img {
+      transform: scale(1.1) rotate(3deg);
+    }
+
+    .student-info strong {
+      display: block;
+      font-size: 1.2em;
+      margin-bottom: 6px;
+      color: #212020;
+    }
+
+    .student-info p {
+      color: #fffdfc;
+      font-size: 0.95em;
+      margin: px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>⚡ SWABA FRIENDS - STUDENTS LIST ⚡</h1>
+
+  <div class="container">
+    <!-- EXAMPLE STUDENT CARDS -->
+   <div class="student-card">
+  <img src="./khan.jpg" alt="MD LARAIB">
+  <div class="student-info">
+    <strong>MD LARAIB</strong>
+    <p>STATE: JHARKHAND</p>
+    <p>Class: U3</p>
+  </div>
+</div>
+
+<div class="student-card">
+  <img src="./minhaj.jpg" alt="MD MINHAJ">
+  <div class="student-info">
+    <strong>MD MINHAJ</strong>
+    <p>STATE: JHARKHAND</p>
+    <p>Class: U3</p>
+  </div>
+</div>
+
+<div class="student-card">
+  <img src="./amir.jpg" alt="MD AMIR">
+  <div class="student-info">
+    <strong>MD AMIR</strong>
+    <p>STATE: JHARKHAND</p>
+    <p>Class: U3</p>
+  </div>
+</div>
+
+<div class="student-card">
+  <img src="./asjad.jpg" alt="MD ASJAD">
+  <div class="student-info">
+    <strong>MD ASJAD</strong>
+    <p>STATE: UP</p>
+    <p>Class: U3</p>
+  </div>
+</div>
+
+<div class="student-card">
+  <img src="./hammad.jpg" alt="MD HAMMAD">
+  <div class="student-info">
+    <strong>MD HAMMAD</strong>
+    <p>STATE: GOA</p>
+    <p>Class: U3</p>
+  </div>
+</div>
+
+<div class="student-card">
+  <img src="./ADDO.jpg" alt="MD ADDO">
+  <div class="student-info">
+    <strong>MD ADNAN</strong>
+    <p>STATE:NEPAL </p>
+    <p>Class: U3</p>
+  </div>
+</div>
+
+<div class="student-card">
+  <img src="./FARHANI.jpg" alt="FARHANI">
+  <div class="student-info">
+    <strong>MD FARHAN</strong>
+    <p>STATE:JHARKHAND </p>
+    <p>Class: U3</p>
+  </div>
+</div>
+
+<div class="student-card">
+  <img src="./HARIS.jpg" alt="HARIS">
+  <div class="student-info">
+    <strong>MD HARIS </strong>
+    <p>STATE:UP </p>
+    <p>Class: U3</p>
+  </div>
+</div>
+
+<div class="student-card">
+  <img src="./HASNAIN.jpg" alt="MD HASNAIN ">
+  <div class="student-info">
+    <strong>MD HASNAIN</strong>
+    <p>STATE:RAJASTHAN </p>
+    <p>Class: U3</p>
+  </div>
+</div>
+
+<div class="student-card">
+  <img src="./MD ANSARI.jpg" alt="MD ANSARI ">
+  <div class="student-info">
+    <strong>MD ANSARI</strong>
+    <p>STATE:UP </p>
+    <p>Class: U3</p>
+  </div>
+</div>
+
+<div class="student-card">
+  <img src="./MOIN.jpg" alt="MOIN ">
+  <div class="student-info">
+    <strong>MD MOINUDDIN</strong>
+    <p>STATE:BIHAR </p>
+    <p>Class: U3</p>
+  </div>
+</div>
+
+<div class="student-card">
+  <img src="./SHAHBAJ (1).jpg" alt="SHAHBAJ ">
+  <div class="student-info">
+    <strong>MD SHAHBAJ</strong>
+    <p>STATE:BIHAR </p>
+    <p>Class: U3</p>
+  </div>
+</div>
+
+<div class="student-card">
+  <img src="./SHANAHSHA.jpg" alt="MD SHANAHSHA ">
+  <div class="student-info">
+    <strong>MD SHANAHSHA</strong>
+    <p>STATE:BIHAR </p>
+    <p>Class: U3</p>
+  </div>
+</div>
+
+<div class="student-card">
+  <img src="./OWAIS.jpg" alt="OWAIS ">
+  <div class="student-info">
+    <strong>MD OWAIS</strong>
+    <p>STATE:JHARKHAND</p>
+    <p>Class: U3</p>
+  </div>
+</div>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login Page</title>
+  <style>
+    body {
+      display: flex; justify-content: center; align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #d8dfed 0%, #bd7c5c 100%);
+      font-family: sans-serif;
+      margin: 0;
+    }
+    .login-box {
+      background: #f1bcab;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      width: 300px;
+      text-align: center;
+    }
+    input, button {
+      width: 100%; padding: 10px; margin: 10px 0;
+      border: 1px solid #000000; border-radius: 5px;
+    }
+    button {
+      background-color: #9e694f;
+      color: rgb(0, 0, 0);
+      border: none;
+      font-weight: bold;
+    }
+    h2 {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <h2>LOGIN<br>TO VISIT LARAIB'S SITE {SWABA FRIENDS}</h2>
+    <input type="text" id="username" placeholder="Username" required />
+    <input type="password" id="password" placeholder="Password" required />
+    <button onclick="login()">Login</button>
+    <p id="error" style="color: red;"></p>
+  </div>
+
+  <script>
+    const users = {
+      "ADMIN": "LARAIB",
+      "1530": "AMIR",
+      "1518": "ARIF",
+      "1514": "SAQLAIN",
+      "1533": "MUHAMMAD",
+      "1517": "SUFIYANKARIMI",
+      "U1526": "Shahnawaj Hussain",
+      "U1529": "Mohd. Romaan",
+      "U1522": "Md Sibten Raja",
+      "U1547": "Md Hussain Akhtar Raza",
+      "U1539": "Mohd Haris",
+      "U1532": "Md Adnan",
+      "U1525": "Md Lariab",
+      "U1521": "Minhaj Alam",
+      "U1531": "Tanzirul Rahman",
+      "U1519": "Mohd Tanveer",
+      "U1480": "Md Sakir Shaikh",
+      "U1528": "Md Waqid Raza",
+      "U1534": "Syed Asjad Iqbal",
+      "U1515": "Shahanshah Alam",
+      "U1545": "Md Azmal Rehan",
+      "U1484": "Mohammad Aatif",
+      "U1541": "Mohd Ali",
+      "U1535": "Md Mohibul",
+      "U1441": "Mohammad Farhan Hussain",
+      "U1550": "Mohammad Ansari",
+      "U1553": "Md Moinuddin",
+      "U1483": "Hammad Raza Shaikh",
+      "U1469": "Md Mogish Raza",
+      "U1537": "Ansari Mohammed Shahnawaz Noushad Ahmad",
+      "U1549": "Syed Daniyal Hasan",
+      "U1524": "Md Owais Raza",
+      "U1516": "Sahawaz Ansari",
+      "U1548": "Faraz",
+      "U1520": "Tahseen Raza",
+      "U1536": "Md Anas",
+      "U1554": "Athar Rza",
+      "U1523": "Faiz Raja",
+      "U1540": "Hasnain Ahmed Sheikh",
+      "U1555": "Md Almotali",
+      "U1552": "Mohammad Rooh Faiz",
+      "U1542": "Md Sofiyan Raza Firoz",
+      "U1451": "Arsalan",
+      "U1610": "Mojahir"
+    };
+
+    function login() {
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value;
+
+      if (users[username] && users[username] === password) {
+        localStorage.setItem("loggedIn", "true");
+        window.location.href = "index.html"; // Redirect to main page
+      } else {
+        document.getElementById("error").textContent = "THAT IS WRONG! PLEASE TRY AGAIN. THANKS 🤗";
+      }
+    }
+  </script>
+</body>
+</html>

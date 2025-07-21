@@ -1,0 +1,63 @@
+ body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background: linear-gradient(rgba(239, 186, 186, 0.6),rgba(0,0,0,0.6)),
+                 url(/darul.jpg) no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(255, 255, 255, 0.85);
+      z-index: -1;
+    }
+
+    header {
+      background: rgba(222, 173, 120, 0.95);
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 900px;
+      margin: 20px auto;
+      background:  linear-gradient(rgba(239, 206, 186, 0.6),rgba(0,0,0,0.6)),
+      border-radius: 8px;
+      box-shadow: 0 0 10px #ccc;
+    }
+
+    h1, h2 {
+      color: #000000;
+    }
+
+    .quick-facts table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .quick-facts th, .quick-facts td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+
+    footer {
+      background: #110019;
+      color: #eee;
+      text-align: center;
+      padding: 15px;
+    }
+    .quick-facts table{
+      width: 100%;
+      border-collapse: collapse ;
+    }
